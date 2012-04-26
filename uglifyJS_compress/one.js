@@ -57,7 +57,7 @@ function buildOne(fileIn,fileOut,callback){
 			if(fileIn.lastIndexOf('.min.js') == fileIn.length-7){
 				finalCode = originCode;
 				info = 'min file copy';
-			}else{//用uglify压缩文件
+			}else if(path.extname(fileIn) == '.js'){//用uglify压缩JS文件
 				var ast = jsp.parse(originCode);
 				ast = pro.ast_lift_variables(ast);
 				//过滤参数
@@ -68,6 +68,9 @@ function buildOne(fileIn,fileOut,callback){
 				
 				finalCode = pro.gen_code(ast);
 				info = 'create';
+			}else{//其它文件直接进行复制
+				finalCode = originCode;
+				info = 'other file copy';
 			}
 			fs.writeFileSync(fileOut,finalCode,'utf8');
 		}else{
@@ -96,7 +99,7 @@ function buildDir(oldDir,newDir){
 				if(stat.isDirectory()){
 					myLog('[ * sub dir ]',pathname);
 					_bDir(pathname,toPath);
-				}else if(path.extname(file) == '.js'){
+				}else{
 					myTime.timeList.length ++;
 					buildOne(pathname,toPath,function(){
 						myTime.getTotalTime();//得到总运行时间
@@ -107,5 +110,5 @@ function buildDir(oldDir,newDir){
 	}
 }
 //buildOne('d:/Gc/js/global.js','d:/Gc/js_compress/a.min.js');
-var sitePath = 'D:/GC/';
-buildDir(sitePath+'js',sitePath+'js-min');
+var sitePath = 'E:/fdx_git/fandongxi/site/';
+buildDir(sitePath+'js-source',sitePath+'js');
