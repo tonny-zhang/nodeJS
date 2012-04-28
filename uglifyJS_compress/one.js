@@ -51,13 +51,9 @@ function buildOne(fileIn,fileOut,callback){
 		//当目标文件不存在或源文件有修改时进行压缩处理
 		//(***目标文件不能人为修改**)
 		if(!exists || (fs.lstatSync(fileIn).mtime > fs.lstatSync(fileOut).mtime)){
-			var originCode = fs.readFileSync(fileIn,'utf8');
-			var finalCode = '';
-			//当后缀名为.min.js时直接进行复制
-			if(fileIn.lastIndexOf('.min.js') == fileIn.length-7){
-				finalCode = originCode;
-				info = 'min file copy';
-			}else if(path.extname(fileIn) == '.js'){//用uglify压缩JS文件
+			//后缀为.js的且不是.min.js的进行压缩，否则直接进行复制(可能为非文本文件)
+			if(path.extname(fileIn) == '.js' && fileIn.lastIndexOf('.min.js') != fileIn.length-7){
+				var originCode = fs.readFileSync(fileIn,'utf8');
 				var ast = jsp.parse(originCode);
 				ast = pro.ast_lift_variables(ast);
 				//过滤参数
@@ -66,18 +62,17 @@ function buildOne(fileIn,fileOut,callback){
 				});
 				ast = pro.ast_squeeze(ast);
 				
-				finalCode = pro.gen_code(ast);
-				info = 'create';
-			}else{//其它文件直接进行复制
-				finalCode = originCode;
-				info = 'other file copy';
+				var finalCode = pro.gen_code(ast);
+				fs.writeFileSync(fileOut,finalCode,'utf8');
+				myLog('\n[ *** create *** ] [time:',myTime.get(fileIn),'ms ]',fileIn,'\n');
+				callback && callback();
+			}else{
+				copyFile(fileIn,fileOut,callback);
 			}
-			fs.writeFileSync(fileOut,finalCode,'utf8');
 		}else{
-			info = 'not modify';
+			myLog('[ not modify ] [time:',myTime.get(fileIn),'ms ]',fileIn);
+			callback && callback();
 		}
-		myLog('[',info,' ] [time:',myTime.get(fileIn),'ms ]',fileIn);
-		callback && callback();
 	});
 }
 /**遍历整个文件夹，不存在时创建*/
@@ -109,6 +104,18 @@ function buildDir(oldDir,newDir){
 		});
 	}
 }
+/**复制单个文件*/
+function copyFile(originFile,finalFile,callback){
+	var fileReadStream = fs.createReadStream(originFile);
+	var fileWriteStream = fs.createWriteStream(finalFile);
+	fileReadStream.pipe(fileWriteStream);
+
+	fileWriteStream.on('close',function(){
+		myLog('\n[ *** copy *** ] [time:',myTime.get(originFile),'ms ]',originFile,'\n');
+		callback && callback();
+	});
+}
 //buildOne('d:/Gc/js/global.js','d:/Gc/js_compress/a.min.js');
 var sitePath = 'E:/fdx_git/fandongxi/site/';
 buildDir(sitePath+'js-source',sitePath+'js');
+//copyFile(sitePath+'js-source/tool/swfupload/swfupload.swf','e:/swfupload.swf');
