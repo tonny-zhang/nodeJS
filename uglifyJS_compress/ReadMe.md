@@ -12,3 +12,10 @@
 * 1.把 ./uglify.py放在Sublime Text的安装目录/Data/Packages/Default/下
 * 2.修改./uglify.py,配置相应参数
 * 3.重启Sublime Text，在用户保存文件时就可以自动压缩脚本
+
+##compress.js用法
+
+　　node compress.js [sourceFilePath] [miniFilePath] 
+* node compress.js　(压缩默认目录所有文件)
+* node compress.js /data/js-source/test.js　(压缩指定文件到把路径js-source替换成js的目录)
+* node compress.js /data/js-source/test.js /data/js/test.js (压缩指定文件)
