@@ -166,8 +166,11 @@ var Compress = (function(){
 
 var arg = process.argv;
 
+	//项目根目录
 var siteBase = 'D:/GC/',
+	//JS源文件目录
 	jsSourcePath = 'js-source/',
+	//JS压缩文件存放目录
 	jsMiniPath = 'js/';
 
 //命令行进行指定文件压缩
