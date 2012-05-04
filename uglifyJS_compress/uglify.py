@@ -10,7 +10,7 @@ class uglifyJS(sublime_plugin.EventListener):
 
 		#path must be composed by slash (/),not by (\)
 		#site config
-		_siteJsPath = _formatPath('D:/GC/js-source');
+		_siteJsPath = _formatPath('E:/fdx_git/fandongxi/site/js-source');
 		if(_path.startswith(_siteJsPath)):
 			os.popen(_nodeCommand+_file_name);
 
