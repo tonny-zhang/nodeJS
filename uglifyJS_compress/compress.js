@@ -167,7 +167,7 @@ var Compress = (function(){
 var arg = process.argv;
 
 	//项目根目录
-var siteBase = 'D:/GC/',
+var siteBase = 'E:/fdx_git/fandongxi/site/',
 	//JS源文件目录
 	jsSourcePath = 'js-source/',
 	//JS压缩文件存放目录
