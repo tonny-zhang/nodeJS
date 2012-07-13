@@ -3,7 +3,7 @@
     <head>
         <script type="text/javascript" charset="utf-8" src="/node_modules/socket.io/lib/socket.io.js"></script>
         <script type="text/javascript" charset="utf-8">
-            var socket = new io.Socket("localhost", { port: 8000 });
+            /*var socket = new io.Socket("localhost", { port: 8000 });
             socket.connect();
             socket.on("connect", function(){ 
                 console.log("connected");
@@ -20,8 +20,19 @@
                 var name = document.querySelector("input[name=name]").value;
                 console.log("send message: " + name);
                 socket.send(name);
-            }
+            }*/
         </script>
+		<script>
+		  var socket = io.connect('http://localhost:8010');
+
+		  socket.on('connect', function () {
+			socket.emit('set nickname', prompt('What is your nickname?'));
+			socket.on('ready', function () {
+			  console.log('Connected !');
+			  socket.emit('msg', prompt('What is your message?'));
+			});
+		  });
+		</script>
     </head>
     <body>
         <label for="name">What's your name:</label>

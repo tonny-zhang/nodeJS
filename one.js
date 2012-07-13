@@ -1,3 +1,3 @@
-console.log(window);
+console.log(123);
 one = 'hello world';
-require('./two');
+require('/two');

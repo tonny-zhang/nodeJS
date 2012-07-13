@@ -7,6 +7,7 @@ var fs = require('fs'),
 var Compress = (function(){
 	//是否显示程序运行过程
 	var _isShowProcess = true,
+	_errorNum = 0,
 	//日志方法
 	_myLog = function(){
 		if(_isShowProcess && arguments.length > 0){
@@ -46,7 +47,7 @@ var Compress = (function(){
 	},
 	//格式化路径
 	_formatPath = function(path){
-		return path?path.replace(/\\/g,'/'):path;
+		return path?path.replace(/\\|\/\//g,'/'):path;
 	},
 	//时间对象
 	_myTime = {
@@ -77,6 +78,9 @@ var Compress = (function(){
 				if(!_this.timeList.length){
 					var str = '[*** over ***] [totalTime:'+_this.get('totalTime')+'ms]';
 					_myLog('\n\r',str.magenta);
+					if(_errorNum>0){
+						_myLog('\n\r\t\t[ *** error *** ] you have '+_errorNum+' error!'.red);
+					}
 				}
 			},3);
 		}
@@ -107,18 +111,24 @@ var Compress = (function(){
 					//后缀为.js的且不是.min.js的进行压缩，否则直接进行复制(可能为非文本文件)
 					if(path.extname(fileIn) == '.js' && fileIn.lastIndexOf('.min.js') != fileIn.length-7){
 						var originCode = fs.readFileSync(fileIn,'utf8');
-						var ast = jsp.parse(originCode);
-						ast = pro.ast_lift_variables(ast);
-						//过滤参数
-						ast = pro.ast_mangle(ast,{
-							'except' : ['require']//不希望被替换的参数
-						});
-						ast = pro.ast_squeeze(ast);
-						
-						var finalCode = pro.gen_code(ast);
-						fs.writeFileSync(fileOut,finalCode,'utf8');
-						var str = '[ *** create *** ] [time:'+_myTime.get(fileIn)+'ms ]'+fileIn;
-						_myLog(str.red);
+						try{
+							var ast = jsp.parse(originCode);
+							ast = pro.ast_lift_variables(ast);
+							//过滤参数
+							ast = pro.ast_mangle(ast,{
+								'except' : ['require']//不希望被替换的参数
+							});
+							ast = pro.ast_squeeze(ast);
+							
+							var finalCode = pro.gen_code(ast);
+							fs.writeFileSync(fileOut,finalCode,'utf8');
+							var str = '[ *** create *** ] [time:'+_myTime.get(fileIn)+'ms ]'+fileIn;
+							_myLog(str.red);
+						}catch(e){
+							_errorNum++;
+							var str = '[ *** error *** ] [message:"'+e.message+'",line:'+e.line+',col:'+e.col+'] '+fileIn;
+							_myLog(str.red);
+						}
 						callback && callback();
 					}else{
 						_copyFile(fileIn,fileOut,callback);
@@ -180,7 +190,17 @@ if(arg.length > 2){
 	if(arg.length > 3){
 		fileOut = arg[3];
 	}
-	Compress.compressFile(fileIn,fileOut);
+	fs.stat(fileIn,function(err,stats){
+		if(err){
+			console.log('[ *** error *** ]');	
+			return;
+		}
+		if(stats.isFile()){
+			Compress.compressFile(fileIn,fileOut);
+		}else{//压缩整个目录
+			Compress.compressPath(fileIn,fileOut);
+		}
+	});
 }else{
 	Compress.compressPath(siteBase+jsSourcePath,siteBase+jsMiniPath);
 }

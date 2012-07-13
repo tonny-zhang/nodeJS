@@ -17,5 +17,7 @@
 
 ##### node compress.js [sourceFilePath] [miniFilePath] 
 * node compress.js　(压缩默认目录所有文件)
+* node compress.js /source-path	(压缩指定目录到把路径js-source替换成js的目录)
+* node compress.js /source-path /target-path (压缩指定目录)
 * node compress.js /data/js-source/test.js　(压缩指定文件到把路径js-source替换成js的目录)
 * node compress.js /data/js-source/test.js /data/js/test.js (压缩指定文件)
