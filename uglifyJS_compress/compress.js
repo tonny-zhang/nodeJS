@@ -11,7 +11,8 @@ var Compress = (function(){
 	//记录出现的错误数
 	_errorNum = 0,
 	//压缩的目标目录正则表达式
-	TARGET_RE = new RegExp('(/.*?)-source(?=/)','g'),
+	// js-source,./js-source,js-source/,./js-source/ will to replace with none "-source"
+	TARGET_RE = new RegExp('((^|/).*?)-source($|(?=/))','g'),
 	//没有-source时添加后缀
 	NO_SOURCE_SUFFIX = '-min';
 	//日志方法
@@ -53,7 +54,7 @@ var Compress = (function(){
 	},
 	//格式化路径
 	_formatPath = function(p){
-		return p?path.normalize(p.replace(/\\|\/\//g,'/')):p;
+		return p?path.normalize(p).replace(/\\|\/\//g,'/'):'';
 	},
 	//当没有目标文件时，得到默认目标文件
 	_getTargetPath = function(p){

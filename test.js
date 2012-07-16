@@ -1,3 +1,4 @@
+var path = require('path');
 function log(){
 	if(arguments.length > 0 && typeof arguments[0] == 'object'){
 		logObj(arguments[0]);
@@ -8,7 +9,16 @@ function log(){
 function logObj(obj){
 	console.log(obj);
 }
-log(global_path);
+_formatPath = function(p){
+  if(p){
+    p = path.normalize(p).replace(/\\|\/\//g,'/');
+    if(!/^(\w:|\/|\.)/.test(p)){
+      p = './'+p;console.log('--',p);
+    }
+  }
+  return p;
+}
+log(_formatPath('./test/'));return;
 log(__filename);
 log(__dirname);
 logObj(module);
