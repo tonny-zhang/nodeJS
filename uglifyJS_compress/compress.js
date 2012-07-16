@@ -57,13 +57,14 @@ var Compress = (function(){
 	},
 	//当没有目标文件时，得到默认目标文件
 	_getTargetPath = function(p){
-		var _p = p;
+		//保证格式化后的路径名一致
+		var _p = _formatPath(p);
 		if(p){
 			// change a/js-source/a.js -> a/js/a.js
 			//		  a/css-source/a.css -> a/css/a.css
 			//		  a/js-source -> a/js
 			//		  a/css-source -> a/css
-			p = _formatPath(p).replace(TARGET_RE,'$1');
+			p = _p.replace(TARGET_RE,'$1');
 			//这里保证目标文件和源文件不一样
 			if(p == _p){
 				//**入口已经保证了p是一定存在的
@@ -124,7 +125,7 @@ var Compress = (function(){
 		fileReadStream.pipe(fileWriteStream);
 
 		fileWriteStream.on('close',function(){
-			var str = '[ *** copy *** ] [ time:'+_myTime.get(originFile)+'ms ]'+originFile;
+			var str = '[ *** copy *** ] [ time:'+_myTime.get(originFile)+'ms ] '+originFile;
 			_myLog(str.green);
 			callback && callback();
 		});
@@ -196,7 +197,7 @@ var Compress = (function(){
 						stat = fs.lstatSync(pathname);
 					
 					if(stat.isDirectory()){
-						var str = '[ * sub dir ]'+pathname;
+						var str = '[ * sub dir ] '+pathname;
 						_myLog(str.yellow);
 						_bDir(pathname,toPath);
 					}else{
