@@ -22,7 +22,10 @@
 * node compress.js /data/js-source/test.js /data/js/test.js (压缩指定文件)
 
 ####　miniFilePath为空时的生成规则
-	1.首先会把目录中的-source替换掉，如：/a/js-source -> /a/js,a/js-source/b.js -> a/js/b.js
+	1.首先会把目录中的-source替换掉(只替换目录，不替换文件名)，
+		如：/a/js-source -> /a/js,a/js-source/b.js -> a/js/b.js
 	2.如果生成的目标目录和原目录相同
-		* 如果是目录直接在源目录后加 "-min",如：/a/js -> /a/js-min,/a/css -> a/css-min
-		* 如果是文件把文件名后加 "-min",如：/a/js/a.js -> /a/js/a-min.js,/a/css/a.css -> /a/css/a-min.css
+		* 如果是目录直接在源目录后加 "-min",
+			如：/a/js -> /a/js-min,/a/css -> a/css-min
+		* 如果是文件把文件名后加 "-min",
+			如：/a/js/a.js -> /a/js/a-min.js,/a/css/a.css -> /a/css/a-min.css
