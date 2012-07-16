@@ -2,12 +2,18 @@ var fs = require('fs'),
 	jsp = require('uglify-js').parser,
 	pro = require('uglify-js').uglify,
 	path = require('path'),
-	colors = require('colors');
+	colors = require('colors'),
+	cssmin = require('node-css-compressor').cssmin;
 
 var Compress = (function(){
 	//是否显示程序运行过程
 	var _isShowProcess = true,
+	//记录出现的错误数
 	_errorNum = 0,
+	//压缩的目标目录正则表达式
+	TARGET_RE = new RegExp('(/.*?)-source(?=/)','g'),
+	//没有-source时添加后缀
+	NO_SOURCE_SUFFIX = '-min';
 	//日志方法
 	_myLog = function(){
 		if(_isShowProcess && arguments.length > 0){
@@ -46,8 +52,34 @@ var Compress = (function(){
 		}
 	},
 	//格式化路径
-	_formatPath = function(path){
-		return path?path.replace(/\\|\/\//g,'/'):path;
+	_formatPath = function(p){
+		return p?path.normalize(p.replace(/\\|\/\//g,'/')):p;
+	},
+	//当没有目标文件时，得到默认目标文件
+	_getTargetPath = function(p){
+		var _p = p;
+		if(p){
+			// change a/js-source/a.js -> a/js/a.js
+			//		  a/css-source/a.css -> a/css/a.css
+			//		  a/js-source -> a/js
+			//		  a/css-source -> a/css
+			p = _formatPath(p).replace(TARGET_RE,'$1');
+			//这里保证目标文件和源文件不一样
+			if(p == _p){
+				//**入口已经保证了p是一定存在的
+				var stats = fs.statSync(p);
+				if(stats.isFile()){
+					//change a/b.js -> a/b-min.js
+					var ext = path.extname(p);
+					p = p.replace(new RegExp(ext+'$'),NO_SOURCE_SUFFIX+ext);
+				}else{
+					//change a/b/? -> a/b-min
+					p = p.replace(/(.*?)\/?$/,'$1'+NO_SOURCE_SUFFIX);
+				}
+			}
+			_myLog('[*** default path ***]','"'+_p+'"','to','"'+p+'"');
+		}
+		return p;
 	},
 	//时间对象
 	_myTime = {
@@ -92,7 +124,7 @@ var Compress = (function(){
 		fileReadStream.pipe(fileWriteStream);
 
 		fileWriteStream.on('close',function(){
-			var str = '[ *** copy *** ] [time:'+_myTime.get(originFile)+'ms ]'+originFile;
+			var str = '[ *** copy *** ] [ time:'+_myTime.get(originFile)+'ms ]'+originFile;
 			_myLog(str.green);
 			callback && callback();
 		});
@@ -101,15 +133,16 @@ var Compress = (function(){
 	_compressFile = function (fileIn,fileOut,callback){
 		fileIn = _formatPath(fileIn);
 		_myTime.set(fileIn);
-		fileOut = _formatPath(fileOut || fileIn.replace(jsSourcePath,jsMiniPath));
+		fileOut = _formatPath(fileOut) || _getTargetPath(fileIn);
 
 		path.exists(fileOut,function(exists){
 			//当目标文件不存在或源文件有修改时进行压缩处理
 			//(***目标文件不能人为修改**)
 			_mkdirSync(path.dirname(fileOut),function(){
 				if(!exists || fs.lstatSync(fileIn).mtime > fs.lstatSync(fileOut).mtime){
+					var ext = path.extname(fileIn);
 					//后缀为.js的且不是.min.js的进行压缩，否则直接进行复制(可能为非文本文件)
-					if(path.extname(fileIn) == '.js' && fileIn.lastIndexOf('.min.js') != fileIn.length-7){
+					if(ext == '.js' && fileIn.lastIndexOf('.min.js') != fileIn.length-7){
 						var originCode = fs.readFileSync(fileIn,'utf8');
 						try{
 							var ast = jsp.parse(originCode);
@@ -122,7 +155,7 @@ var Compress = (function(){
 							
 							var finalCode = pro.gen_code(ast);
 							fs.writeFileSync(fileOut,finalCode,'utf8');
-							var str = '[ *** create *** ] [time:'+_myTime.get(fileIn)+'ms ]'+fileIn;
+							var str = '[ *** create js *** ] [ time:'+_myTime.get(fileIn)+'ms ] '+fileIn;
 							_myLog(str.red);
 						}catch(e){
 							_errorNum++;
@@ -130,11 +163,17 @@ var Compress = (function(){
 							_myLog(str.red);
 						}
 						callback && callback();
+					}else if(ext == '.css'){
+						var originCode = fs.readFileSync(fileIn,'utf8');
+						fs.writeFileSync(fileOut,cssmin(originCode),'utf8');
+						var str = '[ *** create css *** ] [ time:'+_myTime.get(fileIn)+'ms ] '+fileIn;
+						_myLog(str.red);
+						callback && callback();
 					}else{
 						_copyFile(fileIn,fileOut,callback);
 					}					
 				}else{
-					_myLog('[ not modify ] [time:',_myTime.get(fileIn),'ms ]',fileIn);
+					_myLog('[ not modify ] [ time:',_myTime.get(fileIn),'ms ]',fileIn);
 					callback && callback();
 				}
 			});
@@ -143,7 +182,11 @@ var Compress = (function(){
 	/**遍历整个文件夹，不存在时创建*/
 	_compressPath = function (oldDir,newDir){
 		_myTime.set('totalTime');
-		_bDir(oldDir,newDir);
+		if(!newDir){
+			//得到默认的目标目录
+			newDir = _getTargetPath(oldDir);
+		}
+		_bDir(_formatPath(oldDir),_formatPath(newDir));
 		function _bDir(originDir,finalDir){
 			var files = fs.readdirSync(originDir);
 			_mkdirSync(finalDir,function(){
@@ -165,24 +208,24 @@ var Compress = (function(){
 				});
 			});
 		}
+	},
+	/**打印帮助信息*/
+	_help = function(){
+		_myLog('[ *** error *** ] command error');
+		_myLog('\nUsage:','node',__filename,'source','[target]');
+		_myLog('\t','"if target is not given,target will be source\n\t replace with Compress.TARGET_RE"');
 	}
 	return {
 		//压缩单个文件
 		compressFile : _compressFile,
 		//压缩整个目录
-		compressPath : _compressPath
+		compressPath : _compressPath,
+		//打印帮助信息
+		help : _help
 	};
 })();
 
 var arg = process.argv;
-
-	//项目根目录
-var siteBase = 'E:/fdx_git/fandongxi/site/',
-	//JS源文件目录
-	jsSourcePath = 'js-source/',
-	//JS压缩文件存放目录
-	jsMiniPath = 'js/';
-
 //命令行进行指定文件压缩
 if(arg.length > 2){
 	var fileIn = arg[2],
@@ -192,7 +235,7 @@ if(arg.length > 2){
 	}
 	fs.stat(fileIn,function(err,stats){
 		if(err){
-			console.log('[ *** error *** ]');	
+			console.log('[ *** error *** ] maybe source path is not exists!');	
 			return;
 		}
 		if(stats.isFile()){
@@ -202,5 +245,5 @@ if(arg.length > 2){
 		}
 	});
 }else{
-	Compress.compressPath(siteBase+jsSourcePath,siteBase+jsMiniPath);
+	Compress.help();
 }

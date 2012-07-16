@@ -6,7 +6,7 @@
 	2. 新建目录sampleFolder
 	3. 把compress.js放入sampleFolder
 	4. 在sampleFolder中新建目录node_modules
-	5. 把node_modules里的uglify-js和colors复制到node_modules下
+	5. 把node_modules里的uglify-js、colors和node-css-compressor复制到node_modules下
 
 * 二、配置Sublime Text插件
 	1. 把 ./uglify.py放在Sublime Text的安装目录/Data/Packages/Default/下
@@ -15,9 +15,14 @@
 
 ## compress.js用法
 
-##### node compress.js [sourceFilePath] [miniFilePath] 
-* node compress.js　(压缩默认目录所有文件)
-* node compress.js /source-path	(压缩指定目录到把路径js-source替换成js的目录)
+#### node compress.js [sourceFilePath] [miniFilePath] 
+* node compress.js /source-path	(压缩指定目录到默认目录)
 * node compress.js /source-path /target-path (压缩指定目录)
-* node compress.js /data/js-source/test.js　(压缩指定文件到把路径js-source替换成js的目录)
+* node compress.js /data/js-source/test.js　(压缩指定目录到默认目录)
 * node compress.js /data/js-source/test.js /data/js/test.js (压缩指定文件)
+
+####　miniFilePath为空时的生成规则
+	1.首先会把目录中的-source替换掉，如：/a/js-source -> /a/js,a/js-source/b.js -> a/js/b.js
+	2.如果生成的目标目录和原目录相同
+		* 如果是目录直接在源目录后加 "-min",如：/a/js -> /a/js-min,/a/css -> a/css-min
+		* 如果是文件把文件名后加 "-min",如：/a/js/a.js -> /a/js/a-min.js,/a/css/a.css -> /a/css/a-min.css
