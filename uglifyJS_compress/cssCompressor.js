@@ -4,7 +4,7 @@ var fs = require('fs');
 var cssString = ".foobar { color : rgb(123, 123, 123); }";
 console.log(cssmin(cssString));
 
-var fileSource = 'E:/fdx_git/fandongxi/site/css2/core.css';
+var fileSource = 'd:/source.css';
 var sourceCode = fs.readFileSync(fileSource,'utf8');
 
 fs.writeFileSync('d:/test.css',cssmin(sourceCode),'utf8');
@@ -39,5 +39,3 @@ url(/img/1.jpg)
 		||
 url(http://misc.fan.com/img/1.jpg)
 */
-
-error_log(var_export(array(),true),3,'/zk/test.txt');

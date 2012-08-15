@@ -167,7 +167,10 @@ var Compress = (function(){
 						callback && callback();
 					}else if(ext == '.css'){
 						var originCode = fs.readFileSync(fileIn,'utf8');
-						fs.writeFileSync(fileOut,cssmin(originCode),'utf8');
+						var minCode = cssmin(originCode);
+						//处理css里的Matrix滤镜,第二个参数前加一个空格
+						minCode = minCode.replace(/(filter:progid:DXImageTransform\.Microsoft\.Matrix\([^,]+,)/,'$1 ');
+						fs.writeFileSync(fileOut,minCode,'utf8');
 						var str = '[ *** create css *** ] [ time:'+_myTime.get(fileIn)+'ms ] '+fileIn;
 						_myLog(str.red);
 						callback && callback();
