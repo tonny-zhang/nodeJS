@@ -21,6 +21,13 @@ var Compress = (function(){
 			console.log.apply(null,Array.prototype.splice.call(arguments,0));
 		}
 	},
+	//node 0.7+ 把path里的exists和existsSync都迁移到了fs里
+	_pathExists = (function(){
+		return fs.exists ? fs.exists : path.exists;
+	})(),
+	_pathExistsSync = (function(){
+		return fs.existsSync ? fs.existsSync : path.existsSync;
+	})(),
 	//同步创建父级目录
 	_mkdirSync = function (toPath,callback){
 		var arr = toPath.split('/');
@@ -36,7 +43,7 @@ var Compress = (function(){
 			if(p.indexOf(':') == p.length-1){
 				inner(p+'/'+arr.shift());
 				return;
-			}else if(!path.existsSync(p)){
+			}else if(!_pathExistsSync(p)){
 				console.log(('[ mkdir ] '+p).blue);
 				fs.mkdirSync(p,mode);
 			}
@@ -137,7 +144,7 @@ var Compress = (function(){
 		_myTime.set(fileIn);
 		fileOut = _formatPath(fileOut) || _getTargetPath(fileIn);
 
-		path.exists(fileOut,function(exists){
+		_pathExists(fileOut,function(exists){
 			//当目标文件不存在或源文件有修改时进行压缩处理
 			//(***目标文件不能人为修改**)
 			_mkdirSync(path.dirname(fileOut),function(){
