@@ -1,4 +1,4 @@
-import sublime, sublime_plugin,subprocess,json,re
+import sublime, sublime_plugin,os,json,re
 
 class uglifyJS(sublime_plugin.EventListener):
 	def on_post_save(self, view):
@@ -25,10 +25,10 @@ class uglifyJS(sublime_plugin.EventListener):
 				_compressInfo = 'compress with uglify';
 				_nodeCommand += _file_name+' ';
 				_nodeCommand += _file_name.replace(_jsPathConfig[0],_jsPathConfig[1]) if (type(_jsPathConfig) == type([]) and len(_jsPathConfig) > 1) else '';
-				_commandFile = subprocess.Popen(_nodeCommand,stdout=subprocess.PIPE);
+				_commandFile = os.popen(_nodeCommand);
 
 				#get the result of compressing
-				_lines = _commandFile.stdout.readlines();
+				_lines = _commandFile.readlines();
 
 				for _line in _lines:
 					if ~_line.find('[ *** error *** ]'):
