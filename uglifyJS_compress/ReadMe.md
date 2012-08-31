@@ -30,6 +30,6 @@
 		* 如果是文件把文件名后加 "-min",
 			如：/a/js/a.js -> /a/js/a-min.js,/a/css/a.css -> /a/css/a-min.css
 
-##　node版本升级造成脚本运行异常
+##node版本升级造成脚本运行异常
 	　　由于node升级造成脚本运行异常，node 0.7+以上把path.exists和path.existsSync迁移到了fs模块里，
 	所以会报出警告，这时sublime得到的输出结果有异常，导致整个脚本不会运行结果不对，请更新compress.js。
