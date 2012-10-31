@@ -1,0 +1,179 @@
+@nice-blue: #5B83AD;
+@light-blue: @nice-blue + #111;
+
+#header { color: @light-blue; }
+
+
+//变量不能是属性名(这是定义变量的语法)，如:@bb
+@aa: "color";
+@bb: 'aa';
+
+.test{
+	color: @@bb;
+}
+
+//类继承
+.bordered {
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+#menu a {
+  color: #111;
+  .bordered;
+}
+.post a {
+  color: red;
+  .bordered;
+}
+
+//带参数混合
+.border-radius (@radius : 5px) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+
+#header {
+  .border-radius(4px);
+}
+.button {
+  .border-radius(6px);  
+}
+.radius5{
+ .border-radius(); 
+ .border-radius
+}
+
+
+// @arguments 变量
+.box-shadow (@x: 0, @y: 0, @blur: 1px, @color: #000) {
+  box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+}
+.box-shadow{
+	.box-shadow(2px, 5px);
+}
+
+
+//模式匹配和导引表达式
+.mixin (dark, @color) {
+  color: darken(@color, 10%);
+}
+.mixin (light, @color) {
+  color: lighten(@color, 10%);
+}
+.mixin (@_, @color) {
+  display: block;
+}
+
+.a (@a) {
+  color: @a;
+}
+.a (@a, @b) {
+  color: fade(@a, @b);
+}
+@switch: light;
+
+.class {
+  .mixin(@switch, #888);
+  .a(#123,#456)
+}
+
+//条件
+.mixin (@a) when (lightness(@a) >= 50%) {
+  background-color: black;
+}
+.mixin (@a) when (lightness(@a) < 50%) {
+  background-color: white;
+}
+.mixin (@a) {
+  color: @a;
+}
+.class1 { .mixin(#ddd) }
+.class2 { .mixin(#555) }
+
+
+@media: mobile;
+
+.cc1 (@a) when (@a = mobile) {
+	color:#111;
+}
+.cc1 (@a) when (@a = desktop) {
+	color:#222;
+}
+
+.cc2 (@a, @b) when (@a > @b) { width: @a }
+.cc2 (@a, @b) when (@a < @b) { width: @b }
+.c1{
+	.cc1(@media);
+	.cc2(100px,200px);
+}
+
+.cc12(@a) when (@a > 100) , (@a < 10){
+	color:#c12;
+}
+.cc12(@a) when not (@a > 100) , (@a < 10){
+	color:#c1222;
+}
+.cs2{
+	.cc12(80);
+	.cc12(1111)
+}
+
+//嵌套规则
+#header{
+	 .a{
+		color:#111;
+	}
+	.b{
+		color:#222;
+	}
+}
+@num : 10;
+#header{
+	width : (@num + 1)* 3;
+	font-size:12px;
+	&.fl{
+		float:left;
+	}
+	.a{
+		color:#aaa;
+	}
+	.b{
+		color:#bbb;
+		&:hover{
+			color:#ccc;
+		}
+	}
+}
+
+#namaSpace{
+	text-align:center;
+	.a (){
+		color:#aaa;
+	}
+}
+.c{
+	font-size:12px;
+	#nameSpace > .a();
+}
+#nameSpace {
+	.a(){
+		color:red;
+		&:hover{
+			display:block;
+		}
+	}
+}
+#testNameSpace a{
+	font-size:12px;
+	#nameSpace > .a();
+}
+
+
+@var: `"hello".toUpperCase() + '!'`;
+.a{
+	content : @var;
+}
+@import "./reset.less";
