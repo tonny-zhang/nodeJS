@@ -1,4 +1,4 @@
-var PORT = 8000;
+var PORT = 80;
 var http = require("http");
 var url = require("url");
 var fs = require("fs");
@@ -10,7 +10,7 @@ var zlib = require("zlib");
 var basePath = __dirname;
 var server = http.createServer(function(request, response) {
     response.setHeader("Server", "Node/V5");
-    var pathname = url.parse(request.url).pathname;console.log(pathname);
+    var pathname = url.parse(request.url).pathname;
     if (pathname.slice(-1) === "/") {
         pathname = pathname + config.Welcome.file;
     }
@@ -70,5 +70,7 @@ var server = http.createServer(function(request, response) {
     pathHandle(realPath);
 });
 
-server.listen(PORT);
+server.listen(PORT,'192.168.11.32',function(){
+	console.log(this);
+});
 console.log("Server runing at port: " + PORT + ".");
