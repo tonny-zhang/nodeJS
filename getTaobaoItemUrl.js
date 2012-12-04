@@ -27,15 +27,11 @@ function getItemUrl(clickUrl){
 					console.log('res2 close');
 				});
 				console.log(res2.headers.location);
-				console.log('---4');
 			});
 			req2.end();
-			console.log('---3');
 		}
-		console.log('---2');
 	});
 	req1.end();
-	console.log('---1');
 
 	/*var client_get_js = http.createClient(80, host);
 	var request_get_js = client_get_js.request('GET',clickUrl);
