@@ -1,0 +1,62 @@
+border-radius(){
+  -webkit-border-radius: arguments
+  -moz-border-radius: arguments
+  border-radius: arguments
+}
+body a
+  display inline-block
+  padding: 2px 5px
+  font: 12px/1.4 Arial, sans-serif
+  background: black
+  color: #eee
+  border-radius: 2px
+
+form input
+  padding: 5px
+  border: 1px solid
+  border-radius: 5px
+
+func(){
+	if (mixin == 'root') {
+		.root{
+			border: 1px;
+		}
+	}else if mixin{
+		border: 2px;
+	}else{
+		3px;
+	}
+}
+func1()
+	if (mixin == 'root') {
+		.root{
+			border: 1px;
+		}
+	}else if mixin{
+		border: 2px;
+	}else{
+		3px;
+	}
+
+func2()
+	if (mixin == 'root') {
+		.root{
+			border: 1px;
+		}
+	}else if mixin {
+		border: 2px;
+	}else
+		3px;
+
+/**
+//这种写法错误
+func3(){
+	if (test)
+		border: 1px;
+}*/
+func();
+
+.test{
+	func();
+	border: func()
+}

@@ -1,0 +1,63 @@
+//*** index页面使用样式 ***//
+@import "./import_common"
+
+//这里导入共用样式，可以直接完成合并功能，减少http请求数
+//@import "./lib/reset"
+@import "./lib/common"
+/*!
+ * 这个会直接输出
+ */
+/********************** index.styl ***************************/
+//开始定义私有样式
+.content{
+	@extend .fl;
+	/*extend .fl*/
+	margin: 0 auto;
+	width: WIDTH_BIG;
+	border-radius: 5px;
+	box-shadow: inset 3px 2px 5px #ccc
+	img{
+		/*in .content*/
+		width: WIDTH_SMALL;
+		height: 100px;
+	}
+}
+
+
+//自检API
+//Stylus支持自我检测的API, 这允许混写以及函数反应调用者的相关性。
+//混写(mixin)
+//mixin这个局部变量在函数体内自动赋值。如果调用的函数在根级别，则mixin包含字符串root, 如果其他情况，则是block, 如果调用函数有返回值，最终为false.
+
+func(){
+	if(mixin == 'root'){
+		.got{
+			root: true
+		}
+	}else if mixin{
+		got 'a mixin';
+	}else{
+		'not a mixin';
+	}
+}
+
+func();
+.test{
+	func();
+	border: func()
+}
+reset()
+	if (mixin == 'root')
+		got
+			root: true
+	else if mixin
+		got 'a mixin'
+	else
+		'not a mixin'
+
+reset();
+
+body{
+  reset();
+  foo reset();
+}

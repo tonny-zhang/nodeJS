@@ -1,0 +1,1 @@
+(function(e){e.fn.awesome=function(){return this.each(function(){e(this).html("awesome")})},e.awesome=function(){return"awesome"},e.expr[":"].awesome=function(e){return e.textContent.indexOf("awesome")>=0}})(jQuery);

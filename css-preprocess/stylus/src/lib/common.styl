@@ -1,0 +1,19 @@
+//***共用样式***//
+
+/********************** common.styl ***************************/
+/*浮动*/
+.fr { float: right; display: inline;}
+.fl { float: left; display: inline;}
+.cl:after {/* Clear Fix : :: 用于内部有浮动元素的元素，可以起到关闭浮动的作用 */
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.cl {
+	display: inline-block;
+}
+.cl {/* Hide from IE Mac */
+	display: block;
+}
