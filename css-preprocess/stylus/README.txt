@@ -1,5 +1,5 @@
-Ïà¹ØÎÄÕÂ£º
+ï»¿ç›¸å…³æ–‡ç« ï¼š
 	http://www.zhangxinxu.com/wordpress/?p=2464
-ÔÚÏßÎÄµµ£º
+åœ¨çº¿æ–‡æ¡£ï¼š
 	http://www.zhangxinxu.com/jq/stylus/
 	http://learnboost.github.com/stylus/
