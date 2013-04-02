@@ -1,4 +1,5 @@
 var fs = require('fs'),
+	UglifyJS = require('uglify-js'),
 	jsp = require('uglify-js').parser,
 	pro = require('uglify-js').uglify,
 	path = require('path'),
@@ -151,9 +152,31 @@ var Compress = (function(){
 				if(!exists || fs.lstatSync(fileIn).mtime > fs.lstatSync(fileOut).mtime){
 					var ext = path.extname(fileIn);
 					//后缀为.js的且不是.min.js的进行压缩，否则直接进行复制(可能为非文本文件)
-					if(ext == '.js' && fileIn.lastIndexOf('.min.js') != fileIn.length-7){
-						var originCode = fs.readFileSync(fileIn,'utf8');
+					if(ext == '.js'/* && fileIn.lastIndexOf('.min.js') != fileIn.length-7*/){
+						//var originCode = fs.readFileSync(fileIn,'utf8');
 						try{
+							var finalCode = '';
+							//新方法一
+							var obj = UglifyJS.minify(fileIn,{
+								mangle: {
+									'except' : ['require']//不希望被替换的参数
+								}
+							});
+							finalCode = obj.code;
+							
+							/*
+							//新方法二
+							var ast = UglifyJS.parse(originCode);
+							ast.figure_out_scope();
+							ast.compute_char_frequency();
+							ast.mangle_names({
+								'except' : ['require']//不希望被替换的参数
+							});
+							finalCode = ast.print_to_string();
+							*/
+						
+							/*
+							//老方法
 							var ast = jsp.parse(originCode);
 							ast = pro.ast_lift_variables(ast);
 							//过滤参数
@@ -162,7 +185,8 @@ var Compress = (function(){
 							});
 							ast = pro.ast_squeeze(ast);
 							
-							var finalCode = pro.gen_code(ast);
+							finalCode = pro.gen_code(ast);
+							*/
 							fs.writeFileSync(fileOut,finalCode,'utf8');
 							var str = '[ *** create js *** ] [ time:'+_myTime.get(fileIn)+'ms ] '+fileIn;
 							_myLog(str.red);

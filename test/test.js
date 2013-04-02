@@ -121,3 +121,5 @@ dns.reverse(ip, function (err, domains) {
 	 JSON.stringify(domains));
  }
 });
+
+console.log('module.paths--',module.paths);

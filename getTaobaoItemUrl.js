@@ -53,9 +53,19 @@ function getItemUrl(clickUrl){
 }
 var arg = process.argv;
 //参数为字符串或不能有“&”,因为在命令行中“&”表示命令拼接，即在前面命令执行完后接着执行第二个命令
-if(arg.length > 2){
-	getItemUrl(arg[2]);
-}else{
-	getItemUrl(url);
-}
-http.createClient(80,'www.fan.com');
+// if(arg.length > 2){
+// 	getItemUrl(arg[2]);
+// }else{
+// 	getItemUrl(url);
+// }
+//http.createClient(80,'www.fan.com');
+var req1 = http.get('http://61.4.185.48:81/g/',function (res1) {
+		res1.on('end',function(){
+			console.log('res1 end');
+		}).on('close',function(){
+			console.log('res1 close');
+		}).on('data',function(d){
+			console.log(d.toString());
+		});
+});
+req1.end();
