@@ -1,6 +1,6 @@
-����ǰ����Ŀ�ãӣӼܹ����������⣺
-	һ���ظ��쳵�����ظ����룩���磺Բ����ʽ��һ�ְ취��дһ��class��Բ����ʽд��ȥ����Ҫ��Ԫ�����������class�����е�ʱ��ᷢ����class��̫�ã�������дclass���͵ð������Բ����ʽȫ�����ƣ�����Բ�ǵ����ò�һ�������������á�
-	�����ļ���������ͳ������ʽ������ҳ�湦���ܲ�֣�Ȼ������ҳ��ʹ�ã��������ļ����ʱ�����������http����������Ȼ����ͨ������combo���кϲ���
-	����ͳһ��񼰹淶���ù������磺��ҳ�����弰��ɫ���ã���ͳ��ʽ���ڶ���ط�������ֵͬ��������ά�������㡣
+﻿　　前端项目CSS架构遇到的问题：
+	一、重复造车（或重复代码），如：圆角样式，一种办法是写一个class把圆角样式写进去，需要的元素再引用这个class，但有的时候会发现用class不太好，得重新写class，就得把上面的圆角样式全部复制；而且圆角的设置不一样还得重新设置。
+	二、文件管理，传统处理方式：根据页面功功能拆分，然后引入页面使用，但这样文件多的时候会明显增加http连接数，当然可以通过配置combo进行合并。
+	三、统一风格及规范不好管理，如：用页面字体及颜色设置，传统方式，在多个地方设置相同值，但后期维护不方便。
 
-��������������⣬Ŀǰ��cssԤ������sass��stylus��less�����Ժܺõؽ������ͨ���Ƚ�stylus��sass���񣬵���stylus����ɢ����NodeJS���л���(sass���л�����Ruby)��lessû����sass��stylus��extendģʽ�����ɵĴ���û�к����߾��򡣿����⼸��ѡ��ʹ��stylus��Ϊcss-preprocess���ߣ������sass��NodeJS�棬���Կ���Ǩ�Ƶ�sass��sass���Ͻ�����
+　　针对上述问题，目前的css预处理（sass、stylus、less）可以很好地解决，但通过比较stylus和sass更像，但比stylus更松散且是NodeJS运行环境(sass运行环境是Ruby)；less没有像sass和stylus的extend模式，生成的代码没有后两者精简。考虑这几点选择使用stylus作为css-preprocess工具，如后期sass有NodeJS版，可以考虑迁移到sass（sass更严紧）。

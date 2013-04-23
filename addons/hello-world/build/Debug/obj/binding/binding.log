@@ -1,0 +1,24 @@
+﻿Build started 2013-2-19 15:46:30.
+     1>Project "E:\nodejsSite\addons\hello-world\build\binding.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\obj\binding\binding.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"E:\nodejsSite\node_modules\.node-gyp\0.8.14\src" /I"E:\nodejsSite\node_modules\.node-gyp\0.8.14\deps\uv\include" /I"E:\nodejsSite\node_modules\.node-gyp\0.8.14\deps\v8\include" /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D BUILDING_V8_SHARED=1 /D BUILDING_UV_SHARED=1 /D BUILDING_NODE_EXTENSION /D DEBUG /D _DEBUG /D _WINDLL /GF /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\obj\binding\\" /Fd"Debug\obj\binding\vc100.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt ..\binding.cc
+         binding.cc
+     1>E:\nodejsSite\node_modules\.node-gyp\0.8.14\deps\v8\include\v8.h(178): warning C4506: no definition for inline function 'v8::Persistent<T> v8::Persistent<T>::New(v8::Handle<T>)'
+                 with
+                 [
+                     T=v8::Object
+                 ]
+       ManifestResourceCompile:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\obj\binding\binding.dll.embed.manifest.res" Debug\obj\binding\binding_manifest.rc 
+     1>C:\Program Files\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(991,5): warning MSB8012: TargetExt(.dll) does not match the Linker's OutputFile property value (.node). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\nodejsSite\addons\hello-world\build\Debug\binding.node" /INCREMENTAL /NOLOGO "E:\nodejsSite\node_modules\.node-gyp\0.8.14\Debug\node.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\obj\binding\binding.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\nodejsSite\addons\hello-world\build\Debug\binding.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /MACHINE:X86 /DLL Debug\obj\binding\binding.dll.embed.manifest.res
+         Debug\obj\binding\binding.obj
+     1>LINK : fatal error LNK1104: cannot open file 'E:\nodejsSite\node_modules\.node-gyp\0.8.14\Debug\node.lib'
+     1>Done Building Project "E:\nodejsSite\addons\hello-world\build\binding.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.98

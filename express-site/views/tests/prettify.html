@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+  <head>
+    <!-- meta -->
+    <meta charset="utf-8" />
+    <link type='text/css' rel='stylesheet' href='/stylesheets/lib/prettify.css' />
+    
+    <script src='/javascripts/lib/prettify.js'></script>
+    
+    
+    <title>(懒人必看) 定义Express的自动路由机制 - CNode</title>
+    
+  </head>
+  <body>
+    <pre class="prettyprint"><code>
+/*这是一个注释*/
+var upload = require('utils/upload');
+exports.get = {
+    index: function(req,res){
+        res.send('test index');
+    }
+    , hello: function(req,res){
+        res.send('hello world');
+    }
+    , upload: function(req,res){
+        res.render('tests/upload',{
+            title: 'test upload',
+            ext: require('../config/Global.json').ext
+        });
+    }
+    , prettify: function(req,res){
+        res.render('tests/prettify.html');
+    }
+}
+exports.post = {
+    upload: upload.uploadToPublic
+}
+    </code></pre>
+    <pre class="prettyprint"><code>
+window.onload = function(){
+    prettyPrint();
+}
+    </code></pre>
+    <script>
+    window.onload = function(){
+        prettyPrint();
+    }
+    </script>
+</body>
+</html>
