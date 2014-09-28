@@ -1,0 +1,315 @@
+2013-12-23 02:27:21,368 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.css
+2013-12-23 02:27:21,378 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.css -> 200 (11ms, 4007 bytes)
+2013-12-23 02:27:21,381 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.js
+2013-12-23 02:27:21,384 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.js -> 200 (4ms, 117185 bytes)
+2013-12-23 02:27:21,437 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/tmp/tests.js
+2013-12-23 02:27:21,437 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/dist/handlebars.js
+2013-12-23 02:27:21,437 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/env/common.js
+2013-12-23 02:27:21,444 - sauce_connect:0 - INFO - GET http://localhost:9999/tmp/tests.js -> 200 (5ms, 94529 bytes)
+2013-12-23 02:27:21,444 - sauce_connect:0 - INFO - GET http://localhost:9999/dist/handlebars.js -> 200 (5ms, 84940 bytes)
+2013-12-23 02:27:21,444 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/env/common.js -> 200 (6ms, 1446 bytes)
+2013-12-23 02:27:21,976 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/favicon.ico
+2013-12-23 02:27:21,980 - sauce_connect:0 - INFO - GET http://localhost:9999/favicon.ico -> 404 (4ms, 23 bytes)
+2013-12-23 02:27:30,071 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/
+2013-12-23 02:27:30,075 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/ -> 200 (4ms, 1195 bytes)
+2013-12-23 02:27:30,196 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.css
+2013-12-23 02:27:30,196 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.js
+2013-12-23 02:27:30,200 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.css -> 200 (5ms, 4007 bytes)
+2013-12-23 02:27:30,203 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.js -> 200 (8ms, 117185 bytes)
+2013-12-23 02:27:30,255 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/dist/handlebars.js
+2013-12-23 02:27:30,255 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/env/common.js
+2013-12-23 02:27:30,256 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/tmp/tests.js
+2013-12-23 02:27:30,259 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/env/common.js -> 200 (5ms, 1446 bytes)
+2013-12-23 02:27:30,260 - sauce_connect:0 - INFO - GET http://localhost:9999/dist/handlebars.js -> 200 (6ms, 84940 bytes)
+2013-12-23 02:27:30,262 - sauce_connect:0 - INFO - GET http://localhost:9999/tmp/tests.js -> 200 (7ms, 94529 bytes)
+2013-12-23 02:27:30,864 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/favicon.ico
+2013-12-23 02:27:30,867 - sauce_connect:0 - INFO - GET http://localhost:9999/favicon.ico -> 404 (3ms, 23 bytes)
+2013-12-23 02:27:37,170 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/
+2013-12-23 02:27:37,173 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/ -> 200 (3ms, 1195 bytes)
+2013-12-23 02:27:37,286 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.css
+2013-12-23 02:27:37,288 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.js
+2013-12-23 02:27:37,289 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.css -> 200 (4ms, 4007 bytes)
+2013-12-23 02:27:37,293 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.js -> 200 (5ms, 117185 bytes)
+2013-12-23 02:27:37,344 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/env/common.js
+2013-12-23 02:27:37,344 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/dist/handlebars.js
+2013-12-23 02:27:37,344 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/tmp/tests.js
+2013-12-23 02:27:37,346 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/env/common.js -> 200 (3ms, 1446 bytes)
+2013-12-23 02:27:37,348 - sauce_connect:0 - INFO - GET http://localhost:9999/dist/handlebars.js -> 200 (5ms, 84940 bytes)
+2013-12-23 02:27:37,351 - sauce_connect:0 - INFO - GET http://localhost:9999/tmp/tests.js -> 200 (7ms, 94529 bytes)
+2013-12-23 02:27:37,967 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/favicon.ico
+2013-12-23 02:27:37,970 - sauce_connect:0 - INFO - GET http://localhost:9999/favicon.ico -> 404 (4ms, 23 bytes)
+2013-12-23 02:27:43,642 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/
+2013-12-23 02:27:43,645 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/ -> 200 (3ms, 1195 bytes)
+2013-12-23 02:27:43,808 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.js
+2013-12-23 02:27:43,808 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/env/common.js
+2013-12-23 02:27:43,808 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.css
+2013-12-23 02:27:43,808 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/dist/handlebars.js
+2013-12-23 02:27:43,812 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/env/common.js -> 200 (6ms, 1446 bytes)
+2013-12-23 02:27:43,813 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.css -> 200 (7ms, 4007 bytes)
+2013-12-23 02:27:43,812 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.js -> 200 (6ms, 117185 bytes)
+2013-12-23 02:27:43,815 - sauce_connect:0 - INFO - GET http://localhost:9999/dist/handlebars.js -> 200 (8ms, 84940 bytes)
+2013-12-23 02:27:43,868 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/tmp/tests.js
+2013-12-23 02:27:43,871 - sauce_connect:0 - INFO - GET http://localhost:9999/tmp/tests.js -> 200 (4ms, 94529 bytes)
+2013-12-23 02:27:43,930 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.js
+2013-12-23 02:27:43,930 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.css
+2013-12-23 02:27:43,930 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/tmp/tests.js
+2013-12-23 02:27:43,930 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/dist/handlebars.js
+2013-12-23 02:27:43,930 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/env/common.js
+2013-12-23 02:27:43,936 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.css -> 200 (6ms, 4007 bytes)
+2013-12-23 02:27:43,936 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.js -> 200 (6ms, 117185 bytes)
+2013-12-23 02:27:43,937 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/env/common.js -> 200 (8ms, 1446 bytes)
+2013-12-23 02:27:43,938 - sauce_connect:0 - INFO - GET http://localhost:9999/tmp/tests.js -> 200 (8ms, 94529 bytes)
+2013-12-23 02:27:43,938 - sauce_connect:0 - INFO - GET http://localhost:9999/dist/handlebars.js -> 200 (8ms, 84940 bytes)
+2013-12-23 02:27:44,900 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/favicon.ico
+2013-12-23 02:27:44,904 - sauce_connect:0 - INFO - GET http://localhost:9999/favicon.ico -> 404 (4ms, 23 bytes)
+2013-12-23 02:27:50,318 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/
+2013-12-23 02:27:50,321 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/ -> 200 (3ms, 1195 bytes)
+2013-12-23 02:27:50,444 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.css
+2013-12-23 02:27:50,447 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.css -> 200 (3ms, 4007 bytes)
+2013-12-23 02:27:50,450 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.js
+2013-12-23 02:27:50,450 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/dist/handlebars.js
+2013-12-23 02:27:50,450 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/tmp/tests.js
+2013-12-23 02:27:50,453 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.js -> 200 (4ms, 117185 bytes)
+2013-12-23 02:27:50,454 - sauce_connect:0 - INFO - GET http://localhost:9999/dist/handlebars.js -> 200 (4ms, 84940 bytes)
+2013-12-23 02:27:50,454 - sauce_connect:0 - INFO - GET http://localhost:9999/tmp/tests.js -> 200 (5ms, 94529 bytes)
+2013-12-23 02:27:50,506 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/env/common.js
+2013-12-23 02:27:50,509 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/env/common.js -> 200 (3ms, 1446 bytes)
+2013-12-23 02:27:50,956 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/favicon.ico
+2013-12-23 02:27:50,957 - sauce_connect:0 - INFO - GET http://localhost:9999/favicon.ico -> 404 (2ms, 23 bytes)
+2013-12-23 02:27:56,178 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/
+2013-12-23 02:27:56,181 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/ -> 200 (4ms, 1195 bytes)
+2013-12-23 02:27:56,302 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.css
+2013-12-23 02:27:56,305 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.css -> 200 (4ms, 4007 bytes)
+2013-12-23 02:27:56,361 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.js
+2013-12-23 02:27:56,365 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.js -> 200 (4ms, 117185 bytes)
+2013-12-23 02:27:57,229 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/dist/handlebars.js
+2013-12-23 02:27:57,232 - sauce_connect:0 - INFO - GET http://localhost:9999/dist/handlebars.js -> 200 (3ms, 84940 bytes)
+2013-12-23 02:27:57,605 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/env/common.js
+2013-12-23 02:27:57,607 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/env/common.js -> 200 (2ms, 1446 bytes)
+2013-12-23 02:27:57,704 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/tmp/tests.js
+2013-12-23 02:27:57,709 - sauce_connect:0 - INFO - GET http://localhost:9999/tmp/tests.js -> 200 (5ms, 94529 bytes)
+2013-12-23 02:27:58,358 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/favicon.ico
+2013-12-23 02:27:58,361 - sauce_connect:0 - INFO - GET http://localhost:9999/favicon.ico -> 404 (3ms, 23 bytes)
+2013-12-23 02:28:03,836 - sauce_connect:0 - INFO - received SIGTERM
+2013-12-23 11:36:28,664 - sauce_connect:575 - INFO - / Starting \
+2013-12-23 11:36:28,668 - sauce_connect:576 - INFO - Please wait for "You may start your tests" to start your tests.
+2013-12-23 11:36:28,673 - sauce_connect:588 - DEBUG - System is -5.0 hours off UTC
+2013-12-23 11:36:28,674 - sauce_connect:590 - DEBUG - options: {'user': 'handlebars', 'ports': ['57847'], 'no_ssl_bump_domains': '', 'domains': ['sauce-connect.proxy'], 'debug_ssh': False, 'tunnel_ports': ['80'], 'allow_unclean_exit': False, 'rest_url': 'https://saucelabs.com/rest/v1', 'logfile': 'sauce_connect.log', 'squid_opts': '', 'logfilesize': '31457280', 'boost_mode': True, 'tunnel_identifier': '', 'fast_fail_regexps': '', 'vm_version': '', 'quiet': False, 'latency_log': 150, 'use_ssh_config': False, 'ssh': False, 'se_port': '4445', 'readyfile': None, 'shared_tunnel': False, 'ssh_port': 443, 'direct_domains': '', 'host': '127.0.0.1'}
+2013-12-23 11:36:28,676 - sauce_connect:591 - DEBUG - metadata: {'PythonVersion': '2.5.1', 'OwnerHost': '127.0.0.1', 'Release': '3.0-r30', 'OwnerPorts': ['57847'], 'Ports': ['80'], 'Platform': 'Java-1.6.0_65-Java_HotSpot-TM-_64-Bit_Server_VM,_20.65-b04-462,_Apple_Inc.-on-Mac_OS_X-10.9.1-x86_64', 'Build': '46', 'ScriptRelease': 46, 'ScriptName': 'sauce_connect'}
+2013-12-23 11:36:28,677 - sauce_connect:593 - INFO - Forwarding: ['sauce-connect.proxy']:['80'] -> 127.0.0.1:['57847']
+2013-12-23 11:36:28,691 - sauce_connect:385 - INFO - Succesfully connected to local server 127.0.0.1:57847 in 8ms
+2013-12-23 11:36:29,464 - sauce_connect:248 - INFO - {"squid_config":null,"no_ssl_bump_domains":null,"use_caching_proxy":true,"metadata":{"PythonVersion":"2.5.1","OwnerHost":"127.0.0.1","Release":"3.0-r30","OwnerPorts":["57847"],"Ports":["80"],"Platform":"Java-1.6.0_65-Java_HotSpot-TM-_64-Bit_Server_VM,_20.65-b04-462,_Apple_Inc.-on-Mac_OS_X-10.9.1-x86_64","Build":"46","ScriptRelease":46,"ScriptName":"sauce_connect"},"use_kgp":true,"tunnel_identifier":"","shared_tunnel":false,"fast_fail_regexps":null,"ssh_port":443,"direct_domains":null,"vm_version":"","domain_names":["sauce-connect.proxy"]}
+2013-12-23 11:36:33,726 - sauce_connect:260 - INFO - Tunnel remote VM is provisioned (53bd55ce8cef4f079758fdbcae089062)
+2013-12-23 11:36:34,286 - sauce_connect:278 - INFO - Tunnel remote VM is booting ..
+2013-12-23 11:36:47,173 - sauce_connect:282 - INFO - Tunnel remote VM is running at maki77117.miso.saucelabs.com
+2013-12-23 11:36:47,184 - sauce_connect:385 - INFO - Succesfully connected to local server 127.0.0.1:57847 in 0ms
+2013-12-23 11:36:47,187 - sauce_connect:665 - INFO - Starting connection to tunnel host...
+2013-12-23 11:36:47,188 - sauce_connect:665 - INFO - Connecting to tunnel host maki77117.miso.saucelabs.com as handlebars
+2013-12-23 11:36:47,288 - sauce_connect:665 - INFO - Forwarding Selenium with ephemeral port 57851
+2013-12-23 11:36:47,292 - sauce_connect:665 - INFO - Selenium HTTP proxy listening on port 4445
+2013-12-23 11:36:47,822 - sauce_connect:0 - INFO - Successful handshake with Sauce Connect server
+2013-12-23 11:36:47,897 - sauce_connect:0 - INFO - Tunnel host version: 0.1.0, remote endpoint ID: 45de077e8c8e4295b3a78b8e6f3d69e2
+2013-12-23 11:36:47,900 - sauce_connect:665 - INFO - Connected! You may start your tests.
+2013-12-23 11:39:36,091 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec
+2013-12-23 11:39:36,108 - sauce_connect:0 - INFO - GET http://localhost:9999/spec -> 301 (16ms, 21 bytes)
+2013-12-23 11:39:36,191 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/
+2013-12-23 11:39:36,207 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/ -> 200 (16ms, 1195 bytes)
+2013-12-23 11:39:36,332 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.css
+2013-12-23 11:39:36,331 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.js
+2013-12-23 11:39:36,338 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.css -> 200 (7ms, 4007 bytes)
+2013-12-23 11:39:36,342 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.js -> 200 (10ms, 117185 bytes)
+2013-12-23 11:39:36,390 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/dist/handlebars.js
+2013-12-23 11:39:36,390 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/env/common.js
+2013-12-23 11:39:36,394 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/env/common.js -> 200 (6ms, 1446 bytes)
+2013-12-23 11:39:36,394 - sauce_connect:0 - INFO - GET http://localhost:9999/dist/handlebars.js -> 200 (6ms, 83844 bytes)
+2013-12-23 11:39:37,351 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/tmp/tests.js
+2013-12-23 11:39:37,358 - sauce_connect:0 - INFO - GET http://localhost:9999/tmp/tests.js -> 200 (8ms, 94529 bytes)
+2013-12-23 11:39:38,191 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/favicon.ico
+2013-12-23 11:39:38,197 - sauce_connect:0 - INFO - GET http://localhost:9999/favicon.ico -> 404 (6ms, 23 bytes)
+2013-12-23 11:39:38,848 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/favicon.ico
+2013-12-23 11:39:38,852 - sauce_connect:0 - INFO - GET http://localhost:9999/favicon.ico -> 404 (5ms, 23 bytes)
+2013-12-23 11:39:41,131 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/favicon.ico
+2013-12-23 11:39:41,134 - sauce_connect:0 - INFO - GET http://localhost:9999/favicon.ico -> 404 (5ms, 23 bytes)
+2013-12-23 11:40:30,819 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/
+2013-12-23 11:40:30,823 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/ -> 200 (4ms, 1195 bytes)
+2013-12-23 11:40:30,910 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/dist/handlebars.js
+2013-12-23 11:40:30,910 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.js
+2013-12-23 11:40:30,910 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.css
+2013-12-23 11:40:30,915 - sauce_connect:0 - INFO - GET http://localhost:9999/dist/handlebars.js -> 200 (6ms, 83844 bytes)
+2013-12-23 11:40:30,917 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.css -> 200 (8ms, 4007 bytes)
+2013-12-23 11:40:30,918 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.js -> 200 (9ms, 117185 bytes)
+2013-12-23 11:40:30,953 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/tmp/tests.js
+2013-12-23 11:40:30,953 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/env/common.js
+2013-12-23 11:40:30,961 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/env/common.js -> 200 (9ms, 1446 bytes)
+2013-12-23 11:40:30,961 - sauce_connect:0 - INFO - GET http://localhost:9999/tmp/tests.js -> 200 (9ms, 94529 bytes)
+2013-12-23 11:40:35,621 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/
+2013-12-23 11:40:35,627 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/ -> 200 (6ms, 1195 bytes)
+2013-12-23 11:40:35,710 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.js
+2013-12-23 11:40:35,710 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.css
+2013-12-23 11:40:35,719 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.css -> 200 (9ms, 4007 bytes)
+2013-12-23 11:40:35,720 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.js -> 200 (11ms, 117185 bytes)
+2013-12-23 11:40:35,798 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/env/common.js
+2013-12-23 11:40:35,798 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/dist/handlebars.js
+2013-12-23 11:40:35,798 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/tmp/tests.js
+2013-12-23 11:40:35,802 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/env/common.js -> 200 (4ms, 1446 bytes)
+2013-12-23 11:40:35,802 - sauce_connect:0 - INFO - GET http://localhost:9999/dist/handlebars.js -> 200 (5ms, 83844 bytes)
+2013-12-23 11:40:35,805 - sauce_connect:0 - INFO - GET http://localhost:9999/tmp/tests.js -> 200 (6ms, 94529 bytes)
+2013-12-23 11:41:39,993 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec
+2013-12-23 11:41:39,996 - sauce_connect:0 - INFO - GET http://localhost:9999/spec -> 301 (3ms, 21 bytes)
+2013-12-23 11:41:40,065 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/
+2013-12-23 11:41:40,071 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/ -> 200 (5ms, 1195 bytes)
+2013-12-23 11:41:40,237 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.css
+2013-12-23 11:41:40,243 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.css -> 200 (4ms, 4007 bytes)
+2013-12-23 11:41:40,285 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/dist/handlebars.js
+2013-12-23 11:41:40,285 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.js
+2013-12-23 11:41:40,289 - sauce_connect:0 - INFO - GET http://localhost:9999/dist/handlebars.js -> 200 (4ms, 83844 bytes)
+2013-12-23 11:41:40,290 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.js -> 200 (6ms, 117185 bytes)
+2013-12-23 11:41:40,302 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/env/common.js
+2013-12-23 11:41:40,302 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/tmp/tests.js
+2013-12-23 11:41:40,319 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/env/common.js -> 200 (16ms, 1446 bytes)
+2013-12-23 11:41:40,321 - sauce_connect:0 - INFO - GET http://localhost:9999/tmp/tests.js -> 200 (18ms, 94529 bytes)
+2013-12-23 11:41:42,165 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/favicon.ico
+2013-12-23 11:41:42,168 - sauce_connect:0 - INFO - GET http://localhost:9999/favicon.ico -> 404 (4ms, 23 bytes)
+2013-12-23 11:41:42,885 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/favicon.ico
+2013-12-23 11:41:42,888 - sauce_connect:0 - INFO - GET http://localhost:9999/favicon.ico -> 404 (3ms, 23 bytes)
+2013-12-23 11:41:45,301 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/favicon.ico
+2013-12-23 11:41:45,303 - sauce_connect:0 - INFO - GET http://localhost:9999/favicon.ico -> 404 (4ms, 23 bytes)
+2013-12-23 11:41:48,397 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/
+2013-12-23 11:41:48,403 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/ -> 200 (6ms, 1195 bytes)
+2013-12-23 11:41:48,655 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.css
+2013-12-23 11:41:48,655 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.js
+2013-12-23 11:41:48,655 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/dist/handlebars.js
+2013-12-23 11:41:48,664 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.css -> 200 (9ms, 4007 bytes)
+2013-12-23 11:41:48,670 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.js -> 200 (14ms, 117185 bytes)
+2013-12-23 11:41:48,670 - sauce_connect:0 - INFO - GET http://localhost:9999/dist/handlebars.js -> 200 (14ms, 83844 bytes)
+2013-12-23 11:41:48,875 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/tmp/tests.js
+2013-12-23 11:41:48,875 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/env/common.js
+2013-12-23 11:41:48,881 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/env/common.js -> 200 (5ms, 1446 bytes)
+2013-12-23 11:41:48,881 - sauce_connect:0 - INFO - GET http://localhost:9999/tmp/tests.js -> 200 (6ms, 94529 bytes)
+2013-12-23 11:59:52,822 - sauce_connect:0 - INFO - Sauce Connect connection stalled! 1271/1273 acks, 2809ms since last recv, 2125ms timeout exceeded, min ack: 60
+2013-12-23 11:59:52,828 - sauce_connect:0 - INFO - disconnected from Sauce Connect server
+2013-12-23 11:59:52,832 - sauce_connect:0 - INFO - connection to Sauce Connect server closed
+2013-12-23 12:00:02,677 - sauce_connect:665 - INFO - status check found tunnel in terminated
+2013-12-23 12:00:02,677 - sauce_connect:665 - INFO - Remote tunnel VM no longer running, shutting down
+2013-12-23 12:00:02,680 - sauce_connect:0 - INFO - asked to close connection to Sauce Connect server
+2013-12-23 12:00:02,786 - sauce_connect:671 - INFO - Finished running tunnel
+2013-12-23 12:00:02,788 - sauce_connect:291 - INFO - Shutting down tunnel remote VM (please wait)
+2013-12-23 12:00:02,789 - sauce_connect:292 - DEBUG - tunnel remote VM ID: 53bd55ce8cef4f079758fdbcae089062
+2013-12-23 12:00:03,361 - sauce_connect:314 - INFO - Finished shutting down tunnel remote VM
+2013-12-23 12:00:03,362 - sauce_connect:415 - INFO - \ Exiting /
+2013-12-26 15:35:46,953 - sauce_connect:575 - INFO - / Starting \
+2013-12-26 15:35:46,959 - sauce_connect:576 - INFO - Please wait for "You may start your tests" to start your tests.
+2013-12-26 15:35:46,964 - sauce_connect:588 - DEBUG - System is -5.0 hours off UTC
+2013-12-26 15:35:46,967 - sauce_connect:590 - DEBUG - options: {'user': 'handlebars', 'ports': ['59629'], 'no_ssl_bump_domains': '', 'domains': ['sauce-connect.proxy'], 'debug_ssh': False, 'tunnel_ports': ['80'], 'allow_unclean_exit': False, 'rest_url': 'https://saucelabs.com/rest/v1', 'logfile': 'sauce_connect.log', 'squid_opts': '', 'logfilesize': '31457280', 'boost_mode': True, 'tunnel_identifier': '', 'fast_fail_regexps': '', 'vm_version': '', 'quiet': False, 'latency_log': 150, 'use_ssh_config': False, 'ssh': False, 'se_port': '4445', 'readyfile': None, 'shared_tunnel': False, 'ssh_port': 443, 'direct_domains': '', 'host': '127.0.0.1'}
+2013-12-26 15:35:46,967 - sauce_connect:591 - DEBUG - metadata: {'PythonVersion': '2.5.1', 'OwnerHost': '127.0.0.1', 'Release': '3.0-r30', 'OwnerPorts': ['59629'], 'Ports': ['80'], 'Platform': 'Java-1.6.0_65-Java_HotSpot-TM-_64-Bit_Server_VM,_20.65-b04-462,_Apple_Inc.-on-Mac_OS_X-10.9.1-x86_64', 'Build': '46', 'ScriptRelease': 46, 'ScriptName': 'sauce_connect'}
+2013-12-26 15:35:46,970 - sauce_connect:593 - INFO - Forwarding: ['sauce-connect.proxy']:['80'] -> 127.0.0.1:['59629']
+2013-12-26 15:35:46,984 - sauce_connect:385 - INFO - Succesfully connected to local server 127.0.0.1:59629 in 6ms
+2013-12-26 15:35:47,358 - sauce_connect:248 - INFO - {"squid_config":null,"no_ssl_bump_domains":null,"use_caching_proxy":true,"metadata":{"PythonVersion":"2.5.1","OwnerHost":"127.0.0.1","Release":"3.0-r30","OwnerPorts":["59629"],"Ports":["80"],"Platform":"Java-1.6.0_65-Java_HotSpot-TM-_64-Bit_Server_VM,_20.65-b04-462,_Apple_Inc.-on-Mac_OS_X-10.9.1-x86_64","Build":"46","ScriptRelease":46,"ScriptName":"sauce_connect"},"use_kgp":true,"tunnel_identifier":"","shared_tunnel":false,"fast_fail_regexps":null,"ssh_port":443,"direct_domains":null,"vm_version":"","domain_names":["sauce-connect.proxy"]}
+2013-12-26 15:35:51,382 - sauce_connect:260 - INFO - Tunnel remote VM is provisioned (617284cc1b9a4ce78a5949aef6ae2333)
+2013-12-26 15:35:51,559 - sauce_connect:278 - INFO - Tunnel remote VM is booting ..
+2013-12-26 15:36:18,141 - sauce_connect:282 - INFO - Tunnel remote VM is running at maki76136.miso.saucelabs.com
+2013-12-26 15:36:18,167 - sauce_connect:385 - INFO - Succesfully connected to local server 127.0.0.1:59629 in 0ms
+2013-12-26 15:36:18,171 - sauce_connect:665 - INFO - Starting connection to tunnel host...
+2013-12-26 15:36:18,171 - sauce_connect:665 - INFO - Connecting to tunnel host maki76136.miso.saucelabs.com as handlebars
+2013-12-26 15:36:18,285 - sauce_connect:665 - INFO - Forwarding Selenium with ephemeral port 59646
+2013-12-26 15:36:18,289 - sauce_connect:665 - INFO - Selenium HTTP proxy listening on port 4445
+2013-12-26 15:36:18,657 - sauce_connect:0 - INFO - Successful handshake with Sauce Connect server
+2013-12-26 15:36:18,717 - sauce_connect:0 - INFO - Tunnel host version: 0.1.0, remote endpoint ID: ce74b0da76fe46488024475193e5ea9a
+2013-12-26 15:36:18,720 - sauce_connect:665 - INFO - Connected! You may start your tests.
+2013-12-26 15:36:53,796 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec
+2013-12-26 15:36:53,815 - sauce_connect:0 - INFO - GET http://localhost:9999/spec -> 301 (20ms, 21 bytes)
+2013-12-26 15:36:53,898 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/
+2013-12-26 15:36:53,913 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/ -> 200 (15ms, 1694 bytes)
+2013-12-26 15:36:54,112 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.js
+2013-12-26 15:36:54,112 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.css
+2013-12-26 15:36:54,119 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.css -> 200 (7ms, 4007 bytes)
+2013-12-26 15:36:54,121 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.js -> 200 (8ms, 117185 bytes)
+2013-12-26 15:36:54,178 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/tmp/tests.js
+2013-12-26 15:36:54,178 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/env/common.js
+2013-12-26 15:36:54,178 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/dist/handlebars.js
+2013-12-26 15:36:54,183 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/env/common.js -> 200 (5ms, 1446 bytes)
+2013-12-26 15:36:54,184 - sauce_connect:0 - INFO - GET http://localhost:9999/tmp/tests.js -> 200 (6ms, 100602 bytes)
+2013-12-26 15:36:54,186 - sauce_connect:0 - INFO - GET http://localhost:9999/dist/handlebars.js -> 200 (8ms, 83885 bytes)
+2013-12-26 15:36:55,617 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/favicon.ico
+2013-12-26 15:36:55,621 - sauce_connect:0 - INFO - GET http://localhost:9999/favicon.ico -> 404 (4ms, 23 bytes)
+2013-12-26 15:37:22,137 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/amd.html
+2013-12-26 15:37:22,141 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/amd.html -> 200 (5ms, 1998 bytes)
+2013-12-26 15:37:22,266 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.css
+2013-12-26 15:37:22,270 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.css -> 200 (5ms, 4007 bytes)
+2013-12-26 15:37:22,326 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/env/common.js
+2013-12-26 15:37:22,326 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.js
+2013-12-26 15:37:22,326 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/env/require.js
+2013-12-26 15:37:22,331 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/env/common.js -> 200 (4ms, 1446 bytes)
+2013-12-26 15:37:22,335 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.js -> 200 (9ms, 117185 bytes)
+2013-12-26 15:37:22,335 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/env/require.js -> 200 (9ms, 82687 bytes)
+2013-12-26 15:37:23,446 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/favicon.ico
+2013-12-26 15:37:23,451 - sauce_connect:0 - INFO - GET http://localhost:9999/favicon.ico -> 404 (7ms, 23 bytes)
+2013-12-26 15:38:22,483 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/amd.html
+2013-12-26 15:38:22,487 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/amd.html -> 200 (5ms, 2001 bytes)
+2013-12-26 15:38:22,591 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.css
+2013-12-26 15:38:22,595 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.css -> 200 (4ms, 4007 bytes)
+2013-12-26 15:38:22,653 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/env/require.js
+2013-12-26 15:38:22,657 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.js
+2013-12-26 15:38:22,657 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/env/common.js
+2013-12-26 15:38:22,661 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/env/require.js -> 200 (7ms, 82687 bytes)
+2013-12-26 15:38:22,661 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/env/common.js -> 200 (5ms, 1446 bytes)
+2013-12-26 15:38:22,664 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.js -> 200 (8ms, 117185 bytes)
+2013-12-26 15:38:23,838 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/dist/handlebars.amd.js
+2013-12-26 15:38:23,845 - sauce_connect:0 - INFO - GET http://localhost:9999/dist/handlebars.amd.js -> 200 (6ms, 87965 bytes)
+2013-12-26 15:38:24,213 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/tmp/tests.js
+2013-12-26 15:38:24,217 - sauce_connect:0 - INFO - GET http://localhost:9999/tmp/tests.js -> 200 (6ms, 100602 bytes)
+2013-12-26 15:42:08,657 - sauce_connect:0 - INFO - Sauce Connect connection stalled! 321/323 acks, 2823ms since last recv, 2126ms timeout exceeded, min ack: 62
+2013-12-26 15:42:08,661 - sauce_connect:0 - INFO - disconnected from Sauce Connect server
+2013-12-26 15:42:08,664 - sauce_connect:0 - INFO - connection to Sauce Connect server closed
+2013-12-26 15:42:18,275 - sauce_connect:665 - INFO - status check found tunnel in terminated
+2013-12-26 15:42:18,276 - sauce_connect:665 - INFO - Remote tunnel VM no longer running, shutting down
+2013-12-26 15:42:18,279 - sauce_connect:0 - INFO - asked to close connection to Sauce Connect server
+2013-12-26 15:42:18,384 - sauce_connect:671 - INFO - Finished running tunnel
+2013-12-26 15:42:18,384 - sauce_connect:291 - INFO - Shutting down tunnel remote VM (please wait)
+2013-12-26 15:42:18,387 - sauce_connect:292 - DEBUG - tunnel remote VM ID: 617284cc1b9a4ce78a5949aef6ae2333
+2013-12-26 15:42:18,756 - sauce_connect:314 - INFO - Finished shutting down tunnel remote VM
+2013-12-26 15:42:18,757 - sauce_connect:415 - INFO - \ Exiting /
+2013-12-26 15:52:49,608 - sauce_connect:575 - INFO - / Starting \
+2013-12-26 15:52:49,614 - sauce_connect:576 - INFO - Please wait for "You may start your tests" to start your tests.
+2013-12-26 15:52:49,619 - sauce_connect:588 - DEBUG - System is -5.0 hours off UTC
+2013-12-26 15:52:49,621 - sauce_connect:590 - DEBUG - options: {'user': 'handlebars', 'ports': ['60090'], 'no_ssl_bump_domains': '', 'domains': ['sauce-connect.proxy'], 'debug_ssh': False, 'tunnel_ports': ['80'], 'allow_unclean_exit': False, 'rest_url': 'https://saucelabs.com/rest/v1', 'logfile': 'sauce_connect.log', 'squid_opts': '', 'logfilesize': '31457280', 'boost_mode': True, 'tunnel_identifier': '', 'fast_fail_regexps': '', 'vm_version': '', 'quiet': False, 'latency_log': 150, 'use_ssh_config': False, 'ssh': False, 'se_port': '4445', 'readyfile': None, 'shared_tunnel': False, 'ssh_port': 443, 'direct_domains': '', 'host': '127.0.0.1'}
+2013-12-26 15:52:49,622 - sauce_connect:591 - DEBUG - metadata: {'PythonVersion': '2.5.1', 'OwnerHost': '127.0.0.1', 'Release': '3.0-r30', 'OwnerPorts': ['60090'], 'Ports': ['80'], 'Platform': 'Java-1.6.0_65-Java_HotSpot-TM-_64-Bit_Server_VM,_20.65-b04-462,_Apple_Inc.-on-Mac_OS_X-10.9.1-x86_64', 'Build': '46', 'ScriptRelease': 46, 'ScriptName': 'sauce_connect'}
+2013-12-26 15:52:49,624 - sauce_connect:593 - INFO - Forwarding: ['sauce-connect.proxy']:['80'] -> 127.0.0.1:['60090']
+2013-12-26 15:52:49,634 - sauce_connect:385 - INFO - Succesfully connected to local server 127.0.0.1:60090 in 4ms
+2013-12-26 15:52:49,996 - sauce_connect:248 - INFO - {"squid_config":null,"no_ssl_bump_domains":null,"use_caching_proxy":true,"metadata":{"PythonVersion":"2.5.1","OwnerHost":"127.0.0.1","Release":"3.0-r30","OwnerPorts":["60090"],"Ports":["80"],"Platform":"Java-1.6.0_65-Java_HotSpot-TM-_64-Bit_Server_VM,_20.65-b04-462,_Apple_Inc.-on-Mac_OS_X-10.9.1-x86_64","Build":"46","ScriptRelease":46,"ScriptName":"sauce_connect"},"use_kgp":true,"tunnel_identifier":"","shared_tunnel":false,"fast_fail_regexps":null,"ssh_port":443,"direct_domains":null,"vm_version":"","domain_names":["sauce-connect.proxy"]}
+2013-12-26 15:52:53,588 - sauce_connect:260 - INFO - Tunnel remote VM is provisioned (a48f9d1bf9b2415a85a23af2d2ac4b55)
+2013-12-26 15:52:53,763 - sauce_connect:278 - INFO - Tunnel remote VM is booting ..
+2013-12-26 15:53:25,825 - sauce_connect:282 - INFO - Tunnel remote VM is running at maki77081.miso.saucelabs.com
+2013-12-26 15:53:25,838 - sauce_connect:385 - INFO - Succesfully connected to local server 127.0.0.1:60090 in 1ms
+2013-12-26 15:53:25,841 - sauce_connect:665 - INFO - Starting connection to tunnel host...
+2013-12-26 15:53:25,842 - sauce_connect:665 - INFO - Connecting to tunnel host maki77081.miso.saucelabs.com as handlebars
+2013-12-26 15:53:25,926 - sauce_connect:665 - INFO - Forwarding Selenium with ephemeral port 60094
+2013-12-26 15:53:25,931 - sauce_connect:665 - INFO - Selenium HTTP proxy listening on port 4445
+2013-12-26 15:53:26,312 - sauce_connect:0 - INFO - Successful handshake with Sauce Connect server
+2013-12-26 15:53:26,378 - sauce_connect:0 - INFO - Tunnel host version: 0.1.0, remote endpoint ID: 61f14797453e472e90ab86875fc6e961
+2013-12-26 15:53:26,381 - sauce_connect:665 - INFO - Connected! You may start your tests.
+2013-12-26 15:55:58,569 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/amd.html
+2013-12-26 15:55:58,604 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/amd.html -> 200 (35ms, 2001 bytes)
+2013-12-26 15:55:58,763 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.css
+2013-12-26 15:55:58,779 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.css -> 200 (15ms, 4007 bytes)
+2013-12-26 15:55:58,960 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/node_modules/mocha/mocha.js
+2013-12-26 15:55:58,967 - sauce_connect:0 - INFO - GET http://localhost:9999/node_modules/mocha/mocha.js -> 200 (7ms, 117185 bytes)
+2013-12-26 15:55:59,798 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/env/require.js
+2013-12-26 15:55:59,802 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/env/require.js -> 200 (4ms, 82687 bytes)
+2013-12-26 15:56:00,171 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/spec/env/common.js
+2013-12-26 15:56:00,176 - sauce_connect:0 - INFO - GET http://localhost:9999/spec/env/common.js -> 200 (5ms, 1446 bytes)
+2013-12-26 15:56:00,384 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/dist/handlebars.amd.js
+2013-12-26 15:56:00,388 - sauce_connect:0 - INFO - GET http://localhost:9999/dist/handlebars.amd.js -> 200 (5ms, 87965 bytes)
+2013-12-26 15:56:00,769 - sauce_connect:0 - INFO - Request started: GET http://localhost:9999/tmp/tests.js
+2013-12-26 15:56:00,776 - sauce_connect:0 - INFO - GET http://localhost:9999/tmp/tests.js -> 200 (6ms, 100602 bytes)
+2013-12-26 16:00:33,411 - sauce_connect:0 - INFO - Sauce Connect connection stalled! 391/393 acks, 3032ms since last recv, 2126ms timeout exceeded, min ack: 61
+2013-12-26 16:00:33,414 - sauce_connect:0 - INFO - disconnected from Sauce Connect server
+2013-12-26 16:00:33,415 - sauce_connect:0 - INFO - connection to Sauce Connect server closed
+2013-12-26 16:00:39,918 - sauce_connect:665 - INFO - status check found tunnel in terminated
+2013-12-26 16:00:39,921 - sauce_connect:665 - INFO - Remote tunnel VM no longer running, shutting down
+2013-12-26 16:00:39,923 - sauce_connect:0 - INFO - asked to close connection to Sauce Connect server
+2013-12-26 16:00:40,029 - sauce_connect:671 - INFO - Finished running tunnel
+2013-12-26 16:00:40,029 - sauce_connect:291 - INFO - Shutting down tunnel remote VM (please wait)
+2013-12-26 16:00:40,032 - sauce_connect:292 - DEBUG - tunnel remote VM ID: a48f9d1bf9b2415a85a23af2d2ac4b55
+2013-12-26 16:00:40,387 - sauce_connect:314 - INFO - Finished shutting down tunnel remote VM
+2013-12-26 16:00:40,388 - sauce_connect:415 - INFO - \ Exiting /
